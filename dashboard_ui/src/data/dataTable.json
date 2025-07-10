@@ -1,0 +1,62 @@
+[
+  {
+    "Vendor": "SAINT",
+    "VendorName": "JIANGSU SAINTEK",
+    "DivisionDescription": "HAWKE AND CO OUTERWEAR",
+    "CustomerName": "PRICE SMART INC",
+    "StyleNumber": "HSW9095PS",
+    "Color": "CGRE",
+    "FullCircleFamily": "10000369",
+    "Warehouse": "F0B",
+    "POSeason": "F25",
+    "Size": "S"
+  },
+  {
+    "Vendor": "SAINT",
+    "VendorName": "JIANGSU SAINTEK",
+    "DivisionDescription": "HAWKE AND CO OUTERWEAR",
+    "CustomerName": "PRICE SMART INC",
+    "StyleNumber": "HSW9095PS",
+    "Color": "CGRE",
+    "FullCircleFamily": "10000369",
+    "Warehouse": "F0B",
+    "POSeason": "F25",
+    "Size": "M"
+  },
+  {
+    "Vendor": "SAINT",
+    "VendorName": "JIANGSU SAINTEK",
+    "DivisionDescription": "HAWKE AND CO OUTERWEAR",
+    "CustomerName": "PRICE SMART INC",
+    "StyleNumber": "HSW9095PS",
+    "Color": "CGRE",
+    "FullCircleFamily": "10000369",
+    "Warehouse": "F0B",
+    "POSeason": "F25",
+    "Size": "XL"
+  },
+  {
+    "Vendor": "SAINT",
+    "VendorName": "JIANGSU SAINTEK",
+    "DivisionDescription": "HAWKE AND CO OUTERWEAR",
+    "CustomerName": "PRICE SMART INC",
+    "StyleNumber": "HSW9095PS",
+    "Color": "DANP",
+    "FullCircleFamily": "10000369",
+    "Warehouse": "F0B",
+    "POSeason": "F25",
+    "Size": "S"
+  },
+  {
+    "Vendor": "SAINT",
+    "VendorName": "JIANGSU SAINTEK",
+    "DivisionDescription": "HAWKE AND CO OUTERWEAR",
+    "CustomerName": "PRICE SMART INC",
+    "StyleNumber": "HSW9095PS",
+    "Color": "DANP",
+    "FullCircleFamily": "10000369",
+    "Warehouse": "F0B",
+    "POSeason": "F25",
+    "Size": "M"
+  }
+]

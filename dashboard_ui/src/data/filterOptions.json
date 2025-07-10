@@ -1,0 +1,4 @@
+{
+  "columns": ["Vendor Name", "PO ETD Date", "Customer Name", "Division", "PO No."],
+  "conditions": ["==", "!=", ">", "<", ">=", "<="]
+}

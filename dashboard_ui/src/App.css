@@ -1,0 +1,45 @@
+.container {
+  background-color: #e6f0ff; /* Light blue background */
+  color: #333;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+  color: #003366; /* Dark blue color for headers */
+}
+
+select, input {
+  margin: 5px 0;
+  padding: 10px;
+  border: 1px solid #555;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #007BFF; /* Bootstrap blue */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.filter-section, .chart-section, .table-section {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #ffffff; /* White background for sections */
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+
+table, th, td {
+    border: 1px solid #ccc;
+}

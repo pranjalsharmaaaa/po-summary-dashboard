@@ -1,0 +1,62 @@
+/* src/components/TableData.css */
+
+.tableWrapper {
+  overflow: auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  font-size: 13px;
+}
+
+.customTable {
+  border-spacing: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+th, td {
+  border: 1px solid #e5e5e5;
+  padding: 6px;
+  position: relative;
+  text-align: left;
+}
+
+th {
+  background: #f0f5fa;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.resizer {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 5px;
+  cursor: col-resize;
+  user-select: none;
+}
+
+.resizer:hover {
+  background: #4a90e2;
+}
+
+.cellContent {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Zebra striping */
+.tableRow.even {
+  background-color: #f9fcff;
+}
+
+.tableRow.odd {
+  background-color: #ffffff;
+}
+
+/* Selected row */
+.tableRow.selected {
+  background-color: #fff4cc !important;
+}

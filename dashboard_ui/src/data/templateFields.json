@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Email to",
+    "type": "email",
+    "placeholder": "Enter email"
+  },
+  {
+    "label": "CC",
+    "type": "email",
+    "placeholder": "Add CC"
+  },
+  {
+    "label": "Repeat",
+    "type": "dropdown",
+    "options": ["None", "Daily", "Weekly", "Monthly"]
+  }
+]
