@@ -1,4 +1,24 @@
 {
-  "columns": ["Vendor Name", "PO ETD Date", "Customer Name", "Division", "PO No."],
-  "conditions": ["==", "!=", ">", "<", ">=", "<="]
+  "columns": [
+    "Vendor",
+    "Vendor Name",
+    "Division Description",
+    "PO ETD Date",
+    "Price",
+    "Customer Name",
+    "Style Number",
+    "Color",
+    "Full Circle Family",
+    "PO No.",
+    "Warehouse",
+    "Size"
+  ],
+  "conditions": [
+    "==",
+    "!=",
+    ">",
+    "<",
+    ">=",
+    "<="
+  ]
 }

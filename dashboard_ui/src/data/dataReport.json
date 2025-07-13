@@ -2,11 +2,13 @@
   { "value": "Vendor", "label": "Vendor" },
   { "value": "Vendor Name", "label": "Vendor Name" },
   { "value": "Division Description", "label": "Division Description" },
+  { "value": "PO ETD Date" , "label": "PO ETD Date"},
   { "value": "Price", "label": "Price" },
   { "value": "Customer Name", "label": "Customer Name" },
   { "value": "Style Number", "label": "Style Number" },
   { "value": "Color", "label": "Color" },
   { "value": "Full Circle Family", "label": "Full Circle Family" },
   { "value": "PO No.", "label": "PO No." },
-  { "value": "Warehouse", "label": "Warehouse" }
+  { "value": "Warehouse", "label": "Warehouse" },
+  { "value": "Size", "label": "Size" }
 ]

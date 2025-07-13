@@ -7,6 +7,15 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.custom-datepicker {
+  width: 160px;
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #5F85C4;
+  font-size: 13px;
+}
+
+
 h1, h2 {
   color: #003366; /* Dark blue color for headers */
 }

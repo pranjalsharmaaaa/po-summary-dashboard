@@ -1,19 +1,10 @@
-// src/components/ApplyFilters.jsx
-import React, { useState } from 'react';
+import React from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { FaPlus, FaTrash, FaTimes } from 'react-icons/fa';
-import { MdCalendarToday, MdPadding } from 'react-icons/md';
 import filterOptions from '../data/filterOptions.json';
 
-const ApplyFilters = () => {
-  const [filters, setFilters] = useState([
-    { column: '', condition: '', value: '' },
-    { column: '', condition: '', value: '' },
-    { column: '', condition: '', value: '' },
-    { column: '', condition: '', value: '' }
-  ]);
-
+const ApplyFilters = ({ filters, setFilters, onGenerateReport }) => {
   const handleChange = (index, event) => {
     const { name, value } = event.target;
     const updated = [...filters];
@@ -39,34 +30,20 @@ const ApplyFilters = () => {
 
   const deleteLastFilter = () => {
     if (filters.length > 0) {
-      const confirmDel = window.confirm("Are you sure you want to delete the last filter column?");
+      const confirmDel = window.confirm("Delete last filter?");
       if (confirmDel) setFilters(filters.slice(0, -1));
     }
   };
 
-  const handleGenerateReport = () => {
-    try {
-      filters.forEach((filter, i) => {
-        if (!filter.column || !filter.condition) {
-          throw new Error(`Row ${i + 1}: Column and condition are required.`);
-        }
-        if (['Vendor Name', 'Customer Name'].includes(filter.column)) {
-          if (typeof filter.value !== 'string' || filter.value.trim() === '') {
-            throw new Error(`${filter.column} must be a non-empty string.`);
-          }
-        }
-        if (filter.column === 'PO ETD Date') {
-          if (!(filter.value instanceof Date)) {
-            throw new Error(`Invalid date format at row ${i + 1}`);
-          }
-        }
-      });
-
-      console.log('✅ Valid filters:', filters);
-      alert('✅ Filters passed. Check console.');
-    } catch (err) {
-      alert(`❌ ${err.message}`);
-    }
+  const handleGenerateClick = () => {
+    // Clean up values (e.g., convert dates to string)
+    const formattedFilters = filters.map((filter) => ({
+      ...filter,
+      value: filter.column === 'PO ETD Date' && filter.value instanceof Date
+        ? filter.value.toISOString().split('T')[0]
+        : filter.value
+    }));
+    onGenerateReport(formattedFilters);
   };
 
   return (
@@ -100,7 +77,6 @@ const ApplyFilters = () => {
 
           return (
             <div key={index} style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
-              {/* Column */}
               <select
                 name="column"
                 value={filter.column}
@@ -113,7 +89,6 @@ const ApplyFilters = () => {
                 ))}
               </select>
 
-              {/* Condition */}
               <select
                 name="condition"
                 value={filter.condition}
@@ -126,22 +101,16 @@ const ApplyFilters = () => {
                 ))}
               </select>
 
-              {/* Value Field */}
-              <div style={{ position: 'relative' }}>
+              <div>
                 {isDate ? (
-                  <>
-                    <DatePicker
-                      selected={filter.value}
-                      onChange={(date) => handleDateChange(index, date)}
-                      dateFormat="yyyy-MM-dd"
-                      placeholderText="Date"
-                      className="form-control"
-                      style={{ width: '160px', padding: '6px', borderRadius: '6px', border: '1px solid #5F85C4' }}
-                    />
-                    
-
-                    
-                  </>
+                  <DatePicker
+                    selected={filter.value}
+                    onChange={(date) => handleDateChange(index, date)}
+                    dateFormat="yyyy-MM-dd"
+                    placeholderText="Select Date"
+                    className="datepicker-input"
+                    popperPlacement="bottom-start"
+                  />
                 ) : (
                   <input
                     type="text"
@@ -155,7 +124,6 @@ const ApplyFilters = () => {
                 )}
               </div>
 
-              {/* Clear icon */}
               <FaTimes onClick={() => clearValue(index)} style={{ cursor: 'pointer' }} title="Clear Value" />
             </div>
           );
@@ -164,7 +132,7 @@ const ApplyFilters = () => {
 
       {/* Generate Report Button */}
       <button
-        onClick={handleGenerateReport}
+        onClick={handleGenerateClick}
         style={{
           backgroundColor: '#4790F2',
           color: 'white',
@@ -183,6 +151,8 @@ const ApplyFilters = () => {
 };
 
 export default ApplyFilters;
+
+
 
 
 
